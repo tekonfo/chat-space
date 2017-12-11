@@ -30,8 +30,6 @@ Things you may want to cover:
 |------|----|-------|
 |name|string|null: false, foreign_key: true|
 |email|string|null: false|
-|group_user_id|integer||
-|message_id|integer||
 ### Association
 - has_many :group_users
 - has_many :messages
@@ -40,8 +38,6 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|group_user_id|integer||
-|message_id|integer||
 ### Association
 - has_many :group_users
 - has_many :messages
