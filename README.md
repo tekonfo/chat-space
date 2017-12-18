@@ -28,7 +28,7 @@ Things you may want to cover:
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|name|string|null: false,index: true|
 ### Association
 - has_many :group_users
 - has_many :groups,through: :group-users
@@ -57,7 +57,7 @@ Things you may want to cover:
 - belongs_to :user
 
 
-## group-usersテーブル
+## group_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
