@@ -1,0 +1,45 @@
+
+.top-write
+  チャットグループが作成されました。
+.contents.clearfix
+  .left-content
+    %header.left-content__header.clearfix
+      .introduce__name
+        山田太郎
+      %a.introduce__botton{:herf => "http://localho3000/",:id => "introduce-write"}
+        fa
+      %label.introduce__botton--display.fa.fa-cog.fa-fw{:for => "introduce-write"}
+      %a.introduce__botton{:herf => "http://localho3000/",:id => "introduce-setting"}
+      %label.introduce__botton--display.fa.fa-pencil-square-o{:for => "introduce-setting"}
+
+        / %a.fa-spin{:href => '#':text => "dsa"}
+        / = fa_icon 'chevron-right', text: 'Get started', right: true
+        / %a.introduce__botton{:value => "2"}
+
+    = render :partial => "left-mid"
+
+    /ここ部分テンプレート使うけど今は省略
+    / =@hairetu.each do |article|
+    /   = render :partial => "group", :locals => { article: @hairetu }
+
+  .right-content
+    .chat-group.clearfix
+      .chat-group__div
+        .chat-group--big
+          sampleグループ
+        .chat-group--small
+          cxzcz
+      .chat-group__div--right
+        %form{:url => "/", :method => "get"}
+          %input.chat-group__link{:type => "submit", :value => "exit"}
+
+    .right-mid
+      = render :partial => "right-mid"
+
+    %footer.right-foot.clearfix
+      %form{:url => "/", :method => "post" ,:enctype => "multipart/form-data"}
+        %input.right-foot__text{:type => "text", :value => "type a message"}
+        %input.right-foot__image{:type => "file", :value => "image",:id => "image-botton"}
+        %label.right-foot__image--display.fa.fa-file-image-o{:for => "image-botton"}
+        %input.right-foot__submit{:type => "submit", :value => "send"}
+
