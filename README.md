@@ -45,6 +45,9 @@ Things you may want to cover:
 - has_many :messages
 
 
+
+
+##ggg
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
