@@ -25,3 +25,43 @@ Things you may want to cover:
 
 
 
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false,index: true|
+### Association
+- has_many :group_users
+- has_many :groups,through: :group-users
+- has_many :messages
+
+
+## groupsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+### Association
+- has_many :group_users
+- has_many :users,through: :group-users
+- has_many :messages
+
+
+## messagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|group_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
+|text|string||
+|image|text||
+### Association
+- belongs_to :group
+- belongs_to :user
+
+
+## group_usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :group
+- belongs_to :user
