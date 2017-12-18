@@ -4657,3 +4657,37 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 118ms (Views: 80.9ms | ActiveRecord: 21.2ms)
 
 
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-12-18 15:13:16 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 60ms (Views: 59.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-18 15:20:26 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.haml within layouts/application
+  Rendered messages/_left-mid.html.haml (4.1ms)
+  Rendered messages/_right-mid.html.haml (3.3ms)
+  Rendered messages/index.html.haml within layouts/application (40.3ms)
+Completed 200 OK in 460ms (Views: 446.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-12-18 15:20:47 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (42.8ms)
+Completed 200 OK in 114ms (Views: 74.4ms | ActiveRecord: 20.9ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-12-18 15:23:13 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (3.0ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (23.9ms)
+Completed 200 OK in 102ms (Views: 99.5ms | ActiveRecord: 0.0ms)
+
+
