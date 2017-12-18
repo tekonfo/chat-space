@@ -4612,3 +4612,12 @@ Migrating to DeviseCreateUsers (20171218024331)
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
   [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `users`[0m
   [1m[35m (2.0ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'users'[0m
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-12-18 11:52:01 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (71.4ms)
+Completed 200 OK in 677ms (Views: 624.3ms | ActiveRecord: 11.4ms)
+
+
