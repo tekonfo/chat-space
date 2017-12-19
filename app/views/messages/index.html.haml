@@ -1,20 +1,15 @@
 
-.top-write
-  チャットグループが作成されました。
+/ .top-write
+/   チャットグループが作成されました。
 .contents.clearfix
   .left-content
     %header.left-content__header.clearfix
       .introduce__name
         山田太郎
-      %a.introduce__botton{:herf => "http://localho3000/",:id => "introduce-write"}
-        fa
+      = link_to "Sign out",destroy_user_session_path,method: "delete",:id => "introduce-write"
       %label.introduce__botton--display.fa.fa-cog.fa-fw{:for => "introduce-write"}
-      %a.introduce__botton{:herf => "http://localho3000/",:id => "introduce-setting"}
+      = link_to "Log in",new_user_session_path,:id => "introduce-setting"
       %label.introduce__botton--display.fa.fa-pencil-square-o{:for => "introduce-setting"}
-
-        / %a.fa-spin{:href => '#':text => "dsa"}
-        / = fa_icon 'chevron-right', text: 'Get started', right: true
-        / %a.introduce__botton{:value => "2"}
 
     = render :partial => "left-mid"
 
@@ -30,7 +25,7 @@
         .chat-group--small
           cxzcz
       .chat-group__div--right
-        %form{:url => "/", :method => "get"}
+        %form{:url => "/users/sign_out", :method => "delete"}
           %input.chat-group__link{:type => "submit", :value => "exit"}
 
     .right-mid
