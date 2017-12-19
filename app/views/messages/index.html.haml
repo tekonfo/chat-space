@@ -6,10 +6,10 @@
     %header.left-content__header.clearfix
       .introduce__name
         山田太郎
-      = link_to "Sign out",destroy_user_session_path,method: "delete",:id => "introduce-write"
-      %label.introduce__botton--display.fa.fa-cog.fa-fw{:for => "introduce-write"}
-      = link_to "Log in",new_user_session_path,:id => "introduce-setting"
-      %label.introduce__botton--display.fa.fa-pencil-square-o{:for => "introduce-setting"}
+      = link_to destroy_user_session_path, method: "delete" do
+        %div{ :class => 'fa fa-cog introduce__botton--display' }
+      = link_to new_user_session_path do
+        %div{ :class => 'fa fa-pencil-square-o introduce__botton--display' }
 
     = render :partial => "left-mid"
 
@@ -25,7 +25,7 @@
         .chat-group--small
           cxzcz
       .chat-group__div--right
-        %form{:url => "/users/sign_out", :method => "delete"}
+        = link_to destroy_user_session_path, method: "delete" do
           %input.chat-group__link{:type => "submit", :value => "exit"}
 
     .right-mid
@@ -34,7 +34,7 @@
     %footer.right-foot.clearfix
       %form{:url => "/", :method => "post" ,:enctype => "multipart/form-data"}
         %input.right-foot__text{:type => "text", :value => "type a message"}
-        %input.right-foot__image{:type => "file", :value => "image",:id => "image-botton"}
-        %label.right-foot__image--display.fa.fa-file-image-o{:for => "image-botton"}
+          %input.right-foot__image{:type => "file", :value => "image",:id => "image-botton"}
+            %label.right-foot__image--display.fa.fa-file-image-o{:for => "image-botton"}
         %input.right-foot__submit{:type => "submit", :value => "send"}
 
