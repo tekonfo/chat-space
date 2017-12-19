@@ -9171,3 +9171,82 @@ Processing by MessagesController#index as HTML
 Completed 200 OK in 65ms (Views: 62.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-12-19 13:30:30 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.haml within layouts/application
+  Rendered messages/index.html.haml within layouts/application (13.0ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/kondoutaisyou/programing/chat-space/app/views/messages/index.html.haml:40: syntax error, unexpected keyword_ensure, expecting end-of-input
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^):
+  
+app/views/messages/index.html.haml:40: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering /Users/kondoutaisyou/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/kondoutaisyou/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/kondoutaisyou/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+  Rendering /Users/kondoutaisyou/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/kondoutaisyou/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/kondoutaisyou/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/kondoutaisyou/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/kondoutaisyou/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (108.3ms)
+Started GET "/" for 127.0.0.1 at 2017-12-19 13:30:51 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.haml within layouts/application
+  Rendered messages/_left-mid.html.haml (2.5ms)
+  Rendered messages/_right-mid.html.haml (3.0ms)
+  Rendered messages/index.html.haml within layouts/application (18.1ms)
+  Rendered layouts/_flash.html.haml (2.8ms)
+Completed 200 OK in 57ms (Views: 55.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-19 13:32:07 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.haml within layouts/application
+  Rendered messages/_left-mid.html.haml (2.5ms)
+  Rendered messages/_right-mid.html.haml (2.1ms)
+  Rendered messages/index.html.haml within layouts/application (16.1ms)
+  Rendered layouts/_flash.html.haml (2.0ms)
+Completed 200 OK in 50ms (Views: 47.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-19 13:33:21 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.haml within layouts/application
+  Rendered messages/_left-mid.html.haml (2.4ms)
+  Rendered messages/_right-mid.html.haml (2.2ms)
+  Rendered messages/index.html.haml within layouts/application (16.9ms)
+  Rendered layouts/_flash.html.haml (1.8ms)
+Completed 200 OK in 54ms (Views: 50.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-19 13:33:25 +0900
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-19 13:33:25 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.haml within layouts/application
+  Rendered messages/_left-mid.html.haml (3.2ms)
+  Rendered messages/_right-mid.html.haml (2.3ms)
+  Rendered messages/index.html.haml within layouts/application (22.4ms)
+  Rendered layouts/_flash.html.haml (1.8ms)
+Completed 200 OK in 58ms (Views: 56.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-19 13:33:28 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.haml within layouts/application
+  Rendered messages/_left-mid.html.haml (4.5ms)
+  Rendered messages/_right-mid.html.haml (2.4ms)
+  Rendered messages/index.html.haml within layouts/application (23.2ms)
+  Rendered layouts/_flash.html.haml (1.7ms)
+Completed 200 OK in 60ms (Views: 56.3ms | ActiveRecord: 0.0ms)
+
+

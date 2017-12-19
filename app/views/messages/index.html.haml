@@ -8,8 +8,7 @@
         山田太郎
       = link_to "Sign out",destroy_user_session_path,method: "delete",:id => "introduce-write"
       %label.introduce__botton--display.fa.fa-cog.fa-fw{:for => "introduce-write"}
-      = link_to "Log in",new_user_session_path
-      %a.introduce__botton{:herf => "http://localho3000/",:id => "introduce-setting"}
+      = link_to "Log in",new_user_session_path,:id => "introduce-setting"
       %label.introduce__botton--display.fa.fa-pencil-square-o{:for => "introduce-setting"}
 
     = render :partial => "left-mid"
