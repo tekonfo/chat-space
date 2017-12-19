@@ -45,6 +45,8 @@
           // display: none;
           float: right;
           &--display{
+            zoom: 1,5;
+            margin: 0px 5px 0px 0px;
             float: right;
             color: #FFFFFF;
           }
@@ -150,7 +152,7 @@
     display: flex;
     align-items: center;     /*中央揃え*/
     &__text{
-      width: 60vw;
+      width: 800px;
       height: 50px;
       float: left;
       font-size:16px;
@@ -158,7 +160,7 @@
       margin: 0px 0px 0px 50px;
       }
     &__image{
-      width: 10vw;
+      width: 50px;
       height: 50px;
       float: left;
       font-size:14px;
@@ -166,16 +168,17 @@
       padding: 0px 10px 0px 0px;
       display: none;
 
-      &--display{
+      &--display:before{
+
+        width: 100px;
         background-color: #FFFFFF;
         height: 50px;
-        display:inline;
-        text-align: center;
-        vertical-align: middle;
+
+
             }
     }
     &__submit{
-      width: 20vw;
+      width: 100px;
       height: 50px;
       background-color: #38AEF0;
       text-align: center;
