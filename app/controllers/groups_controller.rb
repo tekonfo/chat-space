@@ -10,6 +10,7 @@ class GroupsController < ApplicationController
 
 
   def create
+    # binding.pry
     if  Group.create(params_permit_group).valid?
       # この書き方はいいのか、、、
       redirect_to controller: :messages, action: :index, notice: 'グループの作成に成功しました'
@@ -18,20 +19,21 @@ class GroupsController < ApplicationController
     end
   end
 
-
   def params_permit_group
-    params.require(:chat_group).permit(:name)
+    params.require(:chat_group).permit(:name, {user_ids: []})
+
+
   end
 
-  def params_permit_notice
-    if params.require(:notice).present?
-      params.require(:notice).permit(:name)
-    end
-  end
+  # def params_permit_notice
+  #   if params.require(:notice).present?
+  #     params.require(:notice).permit(:name)
+  #   end
+  # end
 
-  def params_permit_user
-    params.require(:check_box).permit(:user_ids)
-  end
+  # def params_permit_user
+  #   params.require(:check_box).permit(:user_ids)
+  # end
 
 
 end
