@@ -1,20 +1,15 @@
-/ = form_for @user do |f|
-
-/     = f.label :name, "名前"
-/     = f.text_field :name
-
-/     = f.submit "Send"
 
 
 .chat-group-form
   %h1 新規チャットグループ
 
   = form_for @group  do |f|
-    .chat-group-form__errors
-      %h2
-        1件のエラーが発生しました。
-        %ul
-          %li エラーです
+    - if  @group.errors.any?
+      .chat-group-form__errors
+        %h2
+          1件のエラーが発生しました。
+          %ul
+            %li エラーです
     .chat-group-form__field.clearfix
       .chat-group-form__field--left
         %label.chat-group-form__label{:for => "chat_group_name"} グループ名
@@ -36,6 +31,8 @@
       .chat-group-form__field--left
         %label.chat-group-form__label{:for => "chat_group_チャットメンバー"} チャットメンバー
       .chat-group-form__field--right
+        = collection_check_boxes :check_box , :user_ids, @user , :id, :name do |b|
+          = b.label { b.check_box + b.text }
         / グループ作成機能の追加時はここにcollection_check_boxesの記述を入れてください
         / この部分はインクリメンタルサーチ（ユーザー追加の非同期化のときに使用します
         /
