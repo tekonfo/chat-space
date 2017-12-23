@@ -33,8 +33,8 @@
 
     %footer.right-foot.clearfix
       %form{:url => "/", :method => "post" ,:enctype => "multipart/form-data"}
-        %input.right-foot__text{:type => "text", :value => "type a message"}
+        %input.right-foot__text{:type => "text_field", :value => "type a message"}
           %input.right-foot__image{:type => "file", :value => "image",:id => "image-botton"}
-            %label.right-foot__image--display.fa.fa-file-image-o{:for => "image-botton"}
+            %label.fa.fa-file-image-o.right-foot__image--display{:for => "image-botton"}
         %input.right-foot__submit{:type => "submit", :value => "send"}
 
