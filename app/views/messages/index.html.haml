@@ -11,7 +11,7 @@
       = link_to new_user_session_path do
         %div{ :class => 'fa fa-pencil-square-o introduce__botton--display' }
 
-    = render :partial => "left-mid"
+    = render :partial => "shared/left-mid"
 
     /ここ部分テンプレート使うけど今は省略
     / =@hairetu.each do |article|
@@ -29,7 +29,7 @@
           %input.chat-group__link{:type => "submit", :value => "exit"}
 
     .right-mid
-      = render :partial => "right-mid"
+      = render :partial => "shared/right-mid"
 
     %footer.right-foot.clearfix
       %form{:url => "/", :method => "post" ,:enctype => "multipart/form-data"}
