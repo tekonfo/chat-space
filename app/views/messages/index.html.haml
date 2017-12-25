@@ -1,0 +1,40 @@
+
+/ .top-write
+/   チャットグループが作成されました。
+.contents.clearfix
+  .left-content
+    %header.left-content__header.clearfix
+      .introduce__name
+        山田太郎
+      = link_to destroy_user_session_path, method: "delete" do
+        %div{ :class => 'fa fa-cog introduce__botton--display' }
+      = link_to new_user_session_path do
+        %div{ :class => 'fa fa-pencil-square-o introduce__botton--display' }
+
+    = render :partial => "left-mid"
+
+    /ここ部分テンプレート使うけど今は省略
+    / =@hairetu.each do |article|
+    /   = render :partial => "group", :locals => { article: @hairetu }
+
+  .right-content
+    .chat-group.clearfix
+      .chat-group__div
+        .chat-group--big
+          sampleグループ
+        .chat-group--small
+          cxzcz
+      .chat-group__div--right
+        = link_to destroy_user_session_path, method: "delete" do
+          %input.chat-group__link{:type => "submit", :value => "exit"}
+
+    .right-mid
+      = render :partial => "right-mid"
+
+    %footer.right-foot.clearfix
+      %form{:url => "/", :method => "post" ,:enctype => "multipart/form-data"}
+        %input.right-foot__text{:type => "text_field", :value => "type a message"}
+          %input.right-foot__image{:type => "file", :value => "image",:id => "image-botton"}
+            %label.fa.fa-file-image-o.right-foot__image--display{:for => "image-botton"}
+        %input.right-foot__submit{:type => "submit", :value => "send"}
+
