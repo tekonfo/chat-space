@@ -16739,3 +16739,104 @@ Processing by GroupsController#index as HTML
 Completed 200 OK in 57ms (Views: 53.7ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-12-25 19:05:27 +0900
+Processing by GroupsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-25 19:05:27 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (3.6ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (18.9ms)
+  Rendered layouts/_flash.html.haml (2.3ms)
+Completed 200 OK in 70ms (Views: 68.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-25 19:05:27 +0900
+Processing by GroupsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-25 19:05:27 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (2.7ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (12.5ms)
+  Rendered layouts/_flash.html.haml (3.0ms)
+Completed 200 OK in 59ms (Views: 57.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 03:38:02 +0900
+Processing by GroupsController#index as HTML
+  [1m[36mUser Load (35.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (22.0ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `usergroups` ON `groups`.`id` = `usergroups`.`group_id` WHERE `usergroups`.`user_id` = 1[0m
+  Rendered shared/_left-mid.html.haml (7.2ms)
+  Rendered shared/_left-mid.html.haml (0.1ms)
+  Rendered shared/_left-mid.html.haml (0.2ms)
+  Rendered shared/_left-mid.html.haml (0.2ms)
+  Rendered shared/_right-mid.html.haml (6.5ms)
+  Rendered groups/index.html.haml within layouts/application (146.5ms)
+  Rendered layouts/_flash.html.haml (4.1ms)
+Completed 200 OK in 358ms (Views: 257.6ms | ActiveRecord: 57.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 03:38:10 +0900
+Processing by GroupsController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-26 03:38:10 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (6.1ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (25.2ms)
+  Rendered layouts/_flash.html.haml (2.7ms)
+Completed 200 OK in 168ms (Views: 164.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 03:38:10 +0900
+Processing by GroupsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-26 03:38:10 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (4.1ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (13.5ms)
+  Rendered layouts/_flash.html.haml (2.1ms)
+Completed 200 OK in 58ms (Views: 56.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 03:42:24 +0900
+Processing by GroupsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `usergroups` ON `groups`.`id` = `usergroups`.`group_id` WHERE `usergroups`.`user_id` = 1[0m
+  Rendered shared/_left-mid.html.haml (2.9ms)
+  Rendered shared/_left-mid.html.haml (0.1ms)
+  Rendered shared/_left-mid.html.haml (0.1ms)
+  Rendered shared/_left-mid.html.haml (0.1ms)
+  Rendered shared/_right-mid.html.haml (2.9ms)
+  Rendered groups/index.html.haml within layouts/application (27.7ms)
+  Rendered layouts/_flash.html.haml (3.0ms)
+Completed 200 OK in 654ms (Views: 649.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 03:43:13 +0900
+Processing by GroupsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (1.7ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `usergroups` ON `groups`.`id` = `usergroups`.`group_id` WHERE `usergroups`.`user_id` = 1[0m
+  Rendered shared/_left-mid.html.haml (3.6ms)
+  Rendered shared/_left-mid.html.haml (0.1ms)
+  Rendered shared/_left-mid.html.haml (0.1ms)
+  Rendered shared/_left-mid.html.haml (0.1ms)
+  Rendered shared/_right-mid.html.haml (2.7ms)
+  Rendered groups/index.html.haml within layouts/application (26.5ms)
+  Rendered layouts/_flash.html.haml (2.8ms)
+Completed 200 OK in 523ms (Views: 517.2ms | ActiveRecord: 2.1ms)
+
+
