@@ -5,13 +5,14 @@
   .left-content
     %header.left-content__header.clearfix
       .introduce__name
-        山田太郎
+        = current_user.name
       = link_to destroy_user_session_path, method: "delete" do
         %div{ :class => 'fa fa-cog introduce__botton--display' }
       = link_to new_user_session_path do
         %div{ :class => 'fa fa-pencil-square-o introduce__botton--display' }
+    - @groups.each do |group|
+      = render :partial => "shared/left-mid",:locals => { :group => group}
 
-    = render :partial => "shared/left-mid"
 
     /ここ部分テンプレート使うけど今は省略
     / =@hairetu.each do |article|
