@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 ##これはアクションに対するURLを変更してあげているだけだった
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'messages#index'
+  root 'groups#index'
   get "/users/edit2", :to => "users#edit"
   patch "/users/update", :to => "users#update"
   resources :groups
