@@ -19,19 +19,17 @@ class GroupsController < ApplicationController
 
   def create
 
-
-    count = 0
-    if  group = Group.create(:name => params_permit_group[:name])
-      count = 1
+    group = Group.new
+    count = false
+    if  group.save(:name => params_permit_group[:name])
+      count = true
       params_permit_group[:user_ids].each do |id|
         Usergroup.create(:user_id => id,:group_id => group.id)
       end
     else
-      count = 0
+      count = false
     end
-
-
-
+binding.pry
     if  count
       # この書き方はいいのか、、、
       redirect_to controller: :groups, action: :index, notice: 'グループの作成に成功しました'
