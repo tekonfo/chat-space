@@ -6,9 +6,9 @@
     %header.left-content__header.clearfix
       .introduce__name
         = current_user.name
-      = link_to destroy_user_session_path, method: "delete" do
+      = link_to users_edit2_path do
         %div{ :class => 'fa fa-cog introduce__botton--display' }
-      = link_to new_user_session_path do
+      = link_to users_edit2_path do
         %div{ :class => 'fa fa-pencil-square-o introduce__botton--display' }
     - @groups.each do |group|
       = render :partial => "shared/left-mid",:locals => { :group => group}
