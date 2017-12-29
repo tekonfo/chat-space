@@ -17300,3 +17300,21 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 98ms (Views: 96.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-12-29 14:42:59 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (6.7ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by GroupsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `usergroups` ON `groups`.`id` = `usergroups`.`group_id` WHERE `usergroups`.`user_id` = 1[0m
+  Rendered shared/_left-mid.html.haml (4.3ms)
+  Rendered shared/_left-mid.html.haml (0.1ms)
+  Rendered shared/_left-mid.html.haml (0.1ms)
+  Rendered shared/_left-mid.html.haml (0.1ms)
+  Rendered shared/_left-mid.html.haml (0.1ms)
+  Rendered shared/_left-mid.html.haml (0.2ms)
+  Rendered shared/_right-mid.html.haml (4.5ms)
+  Rendered groups/index.html.haml within layouts/application (121.5ms)
+  Rendered layouts/_flash.html.haml (2.9ms)
+Completed 200 OK in 644ms (Views: 487.3ms | ActiveRecord: 72.8ms)
+
+
