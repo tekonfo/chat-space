@@ -5,13 +5,13 @@
   .left-content
     %header.left-content__header.clearfix
       .introduce__name
-        山田太郎
-      = link_to destroy_user_session_path, method: "delete" do
-        %div{ :class => 'fa fa-cog introduce__botton--display' }
-      = link_to new_user_session_path do
-        %div{ :class => 'fa fa-pencil-square-o introduce__botton--display' }
-
-    = render :partial => "shared/left-mid"
+        = current_user.name
+      = link_to users_edit2_path do
+        .fa.fa-cog.introduce__botton--display
+      = link_to users_edit2_path do
+        .fa.fa-pencil-square-o.introduce__botton--display
+    - @groups.each do |group|
+      = render :partial => "shared/left-mid",:locals => { :group => group}
 
     /ここ部分テンプレート使うけど今は省略
     / =@hairetu.each do |article|
@@ -26,15 +26,15 @@
           cxzcz
       .chat-group__div--right
         = link_to destroy_user_session_path, method: "delete" do
-          %input.chat-group__link{:type => "submit", :value => "exit"}
+          %input.chat-group__link{type:  "submit", value: "exit"}
 
     .right-mid
       = render :partial => "shared/right-mid"
 
     %footer.right-foot.clearfix
-      %form{:url => "/", :method => "post" ,:enctype => "multipart/form-data"}
-        %input.right-foot__text{:type => "text_field", :value => "type a message"}
-          %input.right-foot__image{:type => "file", :value => "image",:id => "image-botton"}
+      %form{url: "/", method: "post" ,enctype: "multipart/form-data"}
+        %input.right-foot__text{type: "text_field", value: "type a message"}
+          %input.right-foot__image{type: "file", value: "image",id: "image-botton"}
             %label.fa.fa-file-image-o.right-foot__image--display{:for => "image-botton"}
-        %input.right-foot__submit{:type => "submit", :value => "send"}
+        %input.right-foot__submit{type: "submit",value: "send"}
 
