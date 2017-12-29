@@ -3,16 +3,15 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .top-write{
-  background-color: #38aef0;
+  background-color: $white-bule;
   text-align: center;
-  color: #FFFFFF;
+  color: $white;
 }
 
  .contents {
    width: 100vw;
    height: 100vw;
    margin: 0 auto;
-
  }
 
  .clearfix:after {
@@ -20,27 +19,28 @@
    clear: both;
    display: block;
   }
-ああああああ
-
 .left-content{
     &__header{
         background-color: #253141;
         padding: 35px 20px 15px;
         height: 50px;
-
     }
     float: left;
     background-color: #2f3e51;
     width:300px;
     height:100vw;
 }
+
+
+
+
 .introduce{
   height:16px;
       &__name{
         float: left;
         font-size:16px;
         font-weight: bold;
-        color: #FFFFFF;
+        color: $white;
       }
       &__botton{
           // display: none;
@@ -49,7 +49,7 @@
             zoom: 1,5;
             margin: 0px 5px 0px 0px;
             float: right;
-            color: #FFFFFF;
+            color: $white;
           }
           &--setting{
             float: right;
@@ -68,12 +68,12 @@
       padding:0px 20px;
     &__messeagesign{
       font-size:11px;
-      color: #FFFFFF;
+      color: $white;
       margin: 0px 0px 40px;
     }
     &__groupname{
       font-size:15px;
-      color: #FFFFFF;
+      color: $white;
       margin: 20px 0px 5px;
     }
  }
@@ -81,7 +81,7 @@
 
 .right-content{
     float: right;
-    background-color: #FFFFFF;
+    background-color: $white;
     width: calc(100vw - 300px);
     height:100vw;
 }
@@ -89,7 +89,7 @@
 
 .chat-group{
   height:100px;
-  background-color: #FFFFFF;
+  background-color: $white;
   padding: 0px 40px;
 
       &__div{
@@ -104,7 +104,7 @@
           margin: 28px 0px 0px;
           padding: 0px 20px;
           float: right;
-          color:#38AEF0;
+          color:$white-bule;
       }
       &--big{
         font-size:20px;
@@ -113,7 +113,7 @@
       }
       &--small{
         font-size:12px;
-        color: #999999;
+        color: $gray;
       }
 
   }
@@ -126,19 +126,19 @@
       &--big1{
         display:table-cell;
         font-size:16px;
-        color: #434a54;
+        color: $dark-gary;
         font-weight: bold;
         padding: 46px 0px 10px;
       }
       &--big2{
         display:table-cell;
         font-size:14px;
-        color: #434a54;
+        color: $dark-gary;
         padding: 49px 0px 10px 10px;
       }
       &--small{
         font-size:12px;
-        color: #999999;
+        color: $gray;
         padding: 0px 0px 40px ;
       }
 }
@@ -147,18 +147,18 @@
 
 
   .right-foot{
-    background-color: #999999;
+    background-color: $gray;
     height: 50px;
     padding: 20px 0px;
     display: flex;
     align-items: center;     /*中央揃え*/
     position: relative;
     &__text{
-      width: 800px;
+      width: 900px;
       height: 50px;
       float: left;
       border: none;
-      color: #434a54;
+      color: $dark-gary;
       margin: 0px 0px 0px 50px;
       padding: 0px 0px 0px 10px;
       }
@@ -167,31 +167,26 @@
       height: 50px;
       float: left;
       font-size:14px;
-      color: #434a54;
+      color: $dark-gary;
       padding: 0px 10px 0px 0px;
       display: none;
 
       &--display{
         position: absolute;
         top: 35px;
-        right: 300px;
-
-
-
-
+        right: 200px;
             }
     }
     &__submit{
       width: 100px;
       height: 50px;
-      background-color: #38AEF0;
+      background-color: $white-bule;
       text-align: center;
       float: right;
       font-size:14px;
-      color: #FFFFFF;
+      color: $white;
       margin: 0px 40px 0px 15px;
       }
-
   }
 
 
@@ -202,12 +197,12 @@
     height: calc(100vw - 190px);
     &__messeagesign{
       font-size:11px;
-      color: #FFFFFF;
+      color: $white;
       margin: 0px 0px 40px;
     }
     &__groupname{
       font-size:15px;
-      color: #FFFFFF;
+      color: $white;
       margin: 20px 0px 5px;
     }
  }
