@@ -154,13 +154,13 @@
     align-items: center;     /*中央揃え*/
     position: relative;
     &__text{
-      width: 900px;
+      width: 80%;
       height: 50px;
       float: left;
       border: none;
       color: $dark-gary;
-      margin: 0px 0px 0px 50px;
-      padding: 0px 0px 0px 10px;
+      margin: 0px 0px 0px 4%;
+      padding: 0px 0px 0px 1%;
       }
     &__image{
       width: 50px;
@@ -173,19 +173,19 @@
 
       &--display{
         position: absolute;
-        top: 35px;
-        right: 200px;
+        top: 40%;
+        right: 18%;
             }
     }
     &__submit{
-      width: 100px;
+      width: 8%;
       height: 50px;
       background-color: $white-bule;
       text-align: center;
       float: right;
       font-size:14px;
       color: $white;
-      margin: 0px 40px 0px 15px;
+      margin: 0px 4% 0px 2%;
       }
   }
 
@@ -207,5 +207,7 @@
     }
  }
 
-
+.form-css{
+  width: 100%
+}
 

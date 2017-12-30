@@ -32,7 +32,7 @@
       = render partial: "shared/right-mid"
 
     %footer.right-foot.clearfix
-      %form{url: "/", method: "post" ,enctype: "multipart/form-data"}
+      %form.form-css{url: "/", method: "post" ,enctype: "multipart/form-data"}
         %input.right-foot__text{type: "text_field", value: "type a message"}
           %input.right-foot__image{type: "file", value: "image",id: "image-botton"}
             %label.fa.fa-file-image-o.right-foot__image--display{for: "image-botton"}
