@@ -123,14 +123,14 @@
 
 
 .name-write{
-      &--big1{
+      &--name{
         display:table-cell;
         font-size:16px;
         color: $dark-gary;
         font-weight: bold;
         padding: 46px 0px 10px;
       }
-      &--big2{
+      &--date{
         display:table-cell;
         font-size:14px;
         color: $dark-gary;
