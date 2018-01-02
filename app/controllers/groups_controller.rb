@@ -10,11 +10,11 @@ class GroupsController < ApplicationController
   def new
     @group = Group.new
     @user = User.all
-
   end
 
 
   def create
+    # binding.pry
     @group = Group.new(group_permit_params)
     if  @group.save
       # group_permit_params[:user_ids].each do |id|
