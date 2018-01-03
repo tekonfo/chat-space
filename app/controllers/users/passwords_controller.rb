@@ -21,11 +21,16 @@ class User::PasswordsController < Devise::PasswordsController
   #   super
   # end
 
-  # protected
+   protected
 
   # def after_resetting_password_path_for(resource)
   #   super(resource)
   # end
+
+
+    def after_update_path_for(resource)
+      edit_user_registration_path
+    end
 
   # The path used after sending reset password instructions
   # def after_sending_reset_password_instructions_path_for(resource_name)

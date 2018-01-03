@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   def update
     user = User.find(current_user.id)
     user.update(params_permit)
-    redirect_to controller: :messages, action: :index
+    redirect_to controller: :groups, action: :index
   end
 
 
