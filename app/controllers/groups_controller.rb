@@ -9,7 +9,7 @@ class GroupsController < ApplicationController
 
   def new
     @group = Group.new
-    @user = User.all
+    @users = User.all
   end
 
 
@@ -20,7 +20,10 @@ class GroupsController < ApplicationController
       redirect_to  action: :index
     else
       @user = User.all
+      flash[:notice] = "グループの作成に失敗しました。"
+
       render  action: :new
+      binding.pry
     end
   end
 
@@ -37,6 +40,7 @@ class GroupsController < ApplicationController
       redirect_to  action: :index
     else
       @user = User.all
+      flash[:notice] = "グループの編集に失敗しました。"
       render action: :edit
     end
   end
