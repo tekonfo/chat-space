@@ -1,11 +1,7 @@
 /tmp/*
 /log/*
-
+!/log/.keep
+!/tmp/.keep
 *.log
-
 *.cache
-
-tmp/cache/assets/sprockets/v3.0/Lz/LzCm0fdSjKF29_O7KahorYmj3_ixH-d49TmF756Skwg.cache
-
-tmp/cache/assets/sprockets/v3.0/WV/wVbAQNXFcQUfuAs2yL8fkvze15QvVeA31zpZwPTSQFQ.cache
 
