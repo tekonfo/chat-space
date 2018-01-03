@@ -14,14 +14,12 @@ class GroupsController < ApplicationController
 
 
   def create
-    # binding.pry
     @group = Group.new(group_permit_params)
     if  @group.save
       flash[:notice] = "グループの作成に成功しました。"
       redirect_to  action: :index
     else
       @user = User.all
-      @group.errors.add(:name, "グループ名を入力してください")
       render  action: :new
     end
   end
@@ -36,7 +34,7 @@ class GroupsController < ApplicationController
     @group = Group.find(params[:id])
     if  @group.update(group_permit_params)
       flash[:notice] = "グループの編集に成功しました。"
-      redirect_to controller: :groups, action: :index
+      redirect_to  action: :index
     else
       @user = User.all
       render action: :edit
