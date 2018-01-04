@@ -1,5 +1,6 @@
 .left-mid
   %p.left-mid__groupname
-    = group.name
+    =  link_to group.name, group_messages_path(group.id)
   %p.left-mid__messeagesign
-    まだメッセージ機能を実装していません
+  -if group.messages.any?
+    = group.messages.last.text
