@@ -21,9 +21,7 @@ class GroupsController < ApplicationController
     else
       @user = User.all
       flash[:notice] = "グループの作成に失敗しました。"
-
       render  action: :new
-      binding.pry
     end
   end
 
