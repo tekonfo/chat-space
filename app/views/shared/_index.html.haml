@@ -26,11 +26,16 @@
         = link_to destroy_user_session_path, method: "delete" do
           %input.chat-group__link{type:  "submit", value: "exit"}
     .right-mid
-      = render partial: "shared/right-mid"
+    - @messages.each do |message|
+      = render partial: "shared/right-mid",locals: {message: message}
     %footer.right-foot.clearfix
-      %formform{url: "/", method: "post" ,enctype: "multipart/form-data"}
-        %input.right-foot__text{type: "text_field", value: "type a message"}
-          %input.right-foot__image{type: "file", value: "image",id: "image-botton"}
-            %label.fa.fa-file-image-o.right-foot__image--display{for: "image-botton"}
-        %input.right-foot__submit{type: "submit",value: "send"}
-
+      / %form{url: "/groups/#{group.id}/messages", method: "post"}
+      /   %input.right-foot__text{type: "text_field", value: "type a message"}
+      /     %input.right-foot__image{type: "file", value: "image",id: "image-botton"}
+      /       %label.fa.fa-file-image-o.right-foot__image--display{for: "image-botton"}
+      /   %input.right-foot__submit{type: "submit",value: "send"}
+      = form_for [@group,@message] do |f|
+        = f.text_field :text ,class: "right-foot__text"
+        = f.file_field :image ,class: "right-foot__image",id: "image-botton"
+        = f.label " ",class: "fa fa-file-image-o right-foot__image--display",for: "image-botton"
+        = f.submit "Send" ,class: "right-foot__submit"
