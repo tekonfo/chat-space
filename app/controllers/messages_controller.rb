@@ -6,8 +6,15 @@ class MessagesController < ApplicationController
     @messages = @group.messages
   end
   def create
-    message = Message.create(message_params)
-    redirect_to  action: :index
+    message = Message.new(message_params)
+    if message.save
+      redirect_to  action: :index
+      flash[:notice] = "メッセージの作成に成功しました。"
+    else
+      flash[:alert] = "メッセージの作成に失敗しました。"
+      redirect_to  action: :index
+    end
+
   end
 
   def message_params
