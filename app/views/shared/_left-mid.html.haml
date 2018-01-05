@@ -1,6 +1,12 @@
 .left-mid
-  %p.left-mid__groupname
-    =  link_to group.name, group_messages_path(group.id)
-  %p.left-mid__messeagesign
+  =  link_to group.name, group_messages_path(group.id) ,class: "left-mid__groupname"
   -if group.messages.any?
-    = group.messages.last.text
+    -if group.messages.last.text?
+      %p.left-mid__messeagesign
+        = group.messages.last.text
+    -else
+      %p.left-mid__messeagesign
+        画像が投稿されています
+  -else
+    %p.left-mid__messeagesign
+      まだメッセージはありません
