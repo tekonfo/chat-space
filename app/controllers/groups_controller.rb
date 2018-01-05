@@ -20,8 +20,7 @@ class GroupsController < ApplicationController
       redirect_to  action: :index
     else
       @user = User.all
-      flash[:notice] = "グループの作成に失敗しました。"
-      render  action: :new
+      flash[:alert] = "グループの作成に失敗しました。"
     end
   end
 
