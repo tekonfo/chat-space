@@ -1,6 +1,9 @@
 %p.name-write--name
-  kondo
+  = message.user.name
 %p.name-write--date
-  2016782
+  = message.updated_at.strftime('%Y/%m/%d %H:%M')
 %p.name-write--small
-  それな
+- if message.text?
+  = message.text
+- if message.image?
+  = image_tag message.image.to_s

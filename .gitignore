@@ -4,4 +4,4 @@
 !/tmp/.keep
 *.log
 *.cache
-
+public/uploads/*
