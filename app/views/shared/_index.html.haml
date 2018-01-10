@@ -26,8 +26,8 @@
         = link_to destroy_user_session_path, method: "delete" do
           %input.chat-group__link{type:  "submit", value: "exit"}
     .right-mid
-    - @messages.each do |message|
-      = render partial: "shared/right-mid",locals: {message: message}
+      - @messages.each do |message|
+        = render partial: "shared/right-mid",locals: {message: message}
     %footer.right-foot.clearfix
       = form_for [@group,@message] do |f|
         = f.text_field :text ,class: "right-foot__text"

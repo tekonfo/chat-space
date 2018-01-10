@@ -68,11 +68,13 @@
       font-size:11px;
       color: $white;
       margin: 0px 0px 40px;
+      text-decoration: none
     }
     &__groupname{
       font-size:15px;
       color: $white;
       margin: 20px 0px 5px;
+      text-decoration: none
     }
  }
 
@@ -197,11 +199,14 @@
       font-size:11px;
       color: $white;
       margin: 0px 0px 40px;
+      text-decoration: none
     }
     &__groupname{
       font-size:15px;
       color: $white;
       margin: 20px 0px 5px;
+      text-decoration: none
+
     }
  }
 
@@ -209,3 +214,7 @@
   width: 100%
 }
 
+
+.new_message{
+  width: 100%;
+}

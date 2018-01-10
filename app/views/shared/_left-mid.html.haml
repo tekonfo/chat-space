@@ -1,12 +1,13 @@
 .left-mid
-  =  link_to group.name, group_messages_path(group.id) ,class: "left-mid__groupname"
-  -if group.messages.any?
-    -if group.messages.last.text?
-      %p.left-mid__messeagesign
-        = group.messages.last.text
+  %a{ href: group_messages_path(group.id), class: "left-mid__groupname" }
+    =  group.name
+    -if group.messages.any?
+      -if group.messages.last.text?
+        %p.left-mid__messeagesign
+          = group.messages.last.text
+      -else
+        %p.left-mid__messeagesign
+          画像が投稿されています
     -else
       %p.left-mid__messeagesign
-        画像が投稿されています
-  -else
-    %p.left-mid__messeagesign
-      まだメッセージはありません
+        まだメッセージはありません
