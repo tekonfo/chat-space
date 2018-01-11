@@ -62,4 +62,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
   gem 'mini_magick'
   gem 'rspec-rails'
   gem 'rails-controller-testing'
-  gem "factory_girl_rails", "~> 4.0"
+  gem 'factory_bot_rails'
+  group :test do
+    gem 'faker'
+  end
+  gem 'rake', '< 11.0'
