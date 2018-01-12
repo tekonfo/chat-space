@@ -13,7 +13,11 @@ class MessagesController < ApplicationController
       flash[:notice] = "メッセージの作成に成功しました。"
     else
       flash[:alert] = "メッセージを送信してください"
-      redirect_to  action: :index
+      @group = Group.find(params[:group_id])
+      @groups = current_user.groups
+      @message = Message.new
+      @messages = @group.messages
+      render  action: :index
     end
 
   end
