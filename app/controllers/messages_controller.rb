@@ -11,7 +11,7 @@ class MessagesController < ApplicationController
       flash[:notice] = "メッセージの作成に成功しました。"
       respond_to do |format|
         format.html { redirect_to action: :index  }
-        format.json {  render 'create.json.jbuilder'  }
+        format.json
       end
     else
       flash[:alert] = "メッセージを送信してください"
