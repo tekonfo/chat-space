@@ -21,6 +21,7 @@ $(function(){
     })
 
     .done(function(data) {
+      $("#user-search-result").empty();
       if (data.length !== 0) {
         data.forEach(function(data){
         var html = buildHTML(data);
@@ -30,6 +31,10 @@ $(function(){
         }
       })
 
+
+    .fail(function(){
+      alert('検索に失敗しました');
+    })
 
     });
   });
