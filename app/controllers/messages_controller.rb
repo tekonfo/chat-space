@@ -4,10 +4,13 @@ class MessagesController < ApplicationController
   def index
   end
   def create
-    message = Message.new(message_params)
-    if message.save
+    @message = Message.new(message_params)
+    if @message.save
       flash[:notice] = "メッセージの作成に成功しました。"
-      redirect_to  action: :index
+      respond_to do |format|
+        format.html { redirect_to action: :index  }
+        format.json
+      end
 
     else
       flash[:alert] = "メッセージを送信してください"
