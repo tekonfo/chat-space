@@ -2,8 +2,12 @@ $(function(){
   function buildHTML(comment){
     var html = `<p class="name-write--name">${comment.user_name}</p>
     <p class="name-write--date">${comment.updated_time}</p>
-    <p class="name-write--small">${comment.text}</p>
     `
+
+    if (comment.text != null) {
+    html = html + `<p class="name-write--small">${comment.text}</p>
+    `
+    }
     if (comment.image.url != null) {
     html = html + `<p><img src="${comment.image.url}" alt="image"></p>
     `
