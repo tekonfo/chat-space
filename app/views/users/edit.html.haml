@@ -8,7 +8,7 @@
       = link_to "トップページに戻る", root_path , class: 'btn'
       / = render "devise/shared/links"
     .account-page__inner--right.user-form
-      = form_for(@user,url: {action: :update} ) do |f|
+      = form_for(@user,:url => {action: :update} ) do |f|
         / = devise_error_messages!
         .field
           .field-label

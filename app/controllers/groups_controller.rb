@@ -9,8 +9,7 @@ class GroupsController < ApplicationController
 
   def new
     @group = Group.new
-    #これではダメだ、遷移先のhtmlはeach使っているので
-    @users = User.where(id: current_user.id)
+    @users = User.all
   end
 
 
@@ -29,7 +28,7 @@ class GroupsController < ApplicationController
 
   def edit
     @group = Group.find(params[:id])
-    @users = @group.users
+    @user = User.all
   end
 
   def update
