@@ -8,6 +8,6 @@ class User < ApplicationRecord
  has_many :groups,through: :usergroups
  has_many :messages
 
-scope :search, -> (keyword,user_id){ where('name LIKE(?)', "%#{keyword}%").where.not(id: user_id).limit(20) }
+ scope :search, -> (keyword,user_id){ where('name LIKE(?)', "%#{keyword}%").where.not(id: user_id).limit(20) }
 
 end
