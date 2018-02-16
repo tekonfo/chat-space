@@ -1,4 +1,4 @@
-$(function(){
+$(document).on('turbolinks:load', function() {
   function buildHTML(comment){
     var html = `<div class="message" data-message-id="${comment.id}"><p class="name-write--name">${comment.user_name}</p>
     <p class="name-write--date">${comment.updated_time}</p>
@@ -30,7 +30,7 @@ $(function(){
     if (data.messages.length != 0) {
       data.messages.forEach(function(message){
         if (message.id > id || id == null) {
-          var html = html + buildHTML(message);
+          html = html + buildHTML(message);
         }
       });
     }
