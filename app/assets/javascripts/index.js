@@ -29,10 +29,9 @@ $(document).on('turbolinks:load', function() {
     var id = $($('.message')[divmessage.length-1]).data('messageId');
     if (data.messages.length != 0) {
       data.messages.forEach(function(message){
-        //if (message.id > id || id == null) {
-          console.log(message);
+        if (message.id > id || id == null) {
           html = html + buildHTML(message);
-        //}
+        }
       });
     }
     $('.right-mid').append(html)
