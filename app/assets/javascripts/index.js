@@ -1,7 +1,7 @@
 $(document).on('turbolinks:load', function() {
   function buildHTML(comment){
-    var html = `<div class="message" data-message-id="${comment.id}"><p class="name-write--name">${comment.user_name}</p>
-    <p class="name-write--date">${comment.updated_time}</p>
+    var html = `<div class="message" data-message-id="${comment.id}"><p class="name-write--name">${comment.name}</p>
+    <p class="name-write--date">${comment.date}</p>
     `
 
     if (comment.text != null) {
@@ -29,12 +29,14 @@ $(document).on('turbolinks:load', function() {
     var id = $($('.message')[divmessage.length-1]).data('messageId');
     if (data.messages.length != 0) {
       data.messages.forEach(function(message){
-        if (message.id > id || id == null) {
+        //if (message.id > id || id == null) {
+          console.log(message);
           html = html + buildHTML(message);
-        }
+        //}
       });
     }
     $('.right-mid').append(html)
+
     })
     .fail(function(){
       alert('エラーが発生しました。');
