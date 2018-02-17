@@ -1,5 +1,5 @@
 $(document).on('turbolinks:load', function() {
-  function buildHTML(comment){
+  function AddNewMessagesHTML(comment){
     var html = `<div class="message" data-message-id="${comment.id}"><p class="name-write--name">${comment.name}</p>
     <p class="name-write--date">${comment.date}</p>
     `
@@ -30,7 +30,7 @@ $(document).on('turbolinks:load', function() {
     if (data.messages.length != 0) {
       data.messages.forEach(function(message){
         if (message.id > id || id == null) {
-          html = html + buildHTML(message);
+          html = html + AddNewMessagesHTML(message);
         }
       });
     }
