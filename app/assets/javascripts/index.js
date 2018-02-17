@@ -8,7 +8,7 @@ $(function(){
     return html;
   }
 
-    function clickHTML(user){
+    function buildClickedHTML(user){
     var html = `
       <div class='chat-group-user clearfix js-chat-member' id='chat-group-user-8'>
       <input name='group[user_ids][]' type='hidden' value="${user.attr("data-user-id")}">
@@ -50,7 +50,7 @@ $(function(){
 
   $(document).on("click",".user-search-add", function() {
     $input = $(this);
-    var add_user_html = clickHTML($input);
+    var add_user_html = buildClickedHTML($input);
     $("#search-users").append(add_user_html);
     $input.parent().remove();
     $.ajax({
