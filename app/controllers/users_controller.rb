@@ -7,7 +7,7 @@ class UsersController < ApplicationController
         user_id << users_id.to_i
       end
     end
-    @users = User.where('name LIKE(?)', "%#{params[:keyword]}%").where.not(id: user_id).limit(20)
+    @users = User.search(params[:keyword],user_id)
     respond_to do |format|
      format.html
      format.json { render 'index', json: @users }
