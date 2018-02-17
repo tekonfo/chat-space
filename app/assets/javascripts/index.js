@@ -1,5 +1,5 @@
 $(function(){
-  function buildHTML(user){
+  function AddSearchedUserHTML(user){
     var html = `
       <div class="chat-group-user clearfix">
       <p class="chat-group-user__name">${user.name}</p>
@@ -8,7 +8,7 @@ $(function(){
     return html;
   }
 
-    function buildClickedHTML(user){
+    function AddMemberHTML(user){
     var html = `
       <div class='chat-group-user clearfix js-chat-member' id='chat-group-user-8'>
       <input name='group[user_ids][]' type='hidden' value="${user.attr("data-user-id")}">
@@ -38,7 +38,7 @@ $(function(){
       result.empty();
       if (data.length !== 0) {
         data.forEach(function(data){
-        var show_user_html = buildHTML(data);
+        var show_user_html = AddSearchedUserHTML(data);
         result.append(show_user_html);
           });
         }
@@ -50,7 +50,7 @@ $(function(){
 
   $(document).on("click",".user-search-add", function() {
     $input = $(this);
-    var add_user_html = buildClickedHTML($input);
+    var add_user_html = AddMemberHTML($input);
     $("#search-users").append(add_user_html);
     $input.parent().remove();
     $.ajax({
