@@ -1,5 +1,8 @@
+
 $(function(){
-  function AddSearchedUserHTML(user){
+
+
+  function buildHTML(user){
     var html = `
       <div class="chat-group-user clearfix">
       <p class="chat-group-user__name">${user.name}</p>
@@ -8,7 +11,7 @@ $(function(){
     return html;
   }
 
-    function AddMemberHTML(user){
+    function addHTML(user){
     var html = `
       <div class='chat-group-user clearfix js-chat-member' id='chat-group-user-8'>
       <input name='group[user_ids][]' type='hidden' value="${user.attr("data-user-id")}">
@@ -20,12 +23,13 @@ $(function(){
 
 
   $("#user-search-field").on("keyup", function() {
-    var input = $(this).val();
+    var input = $("#user-search-field").val();
     var user_ids = [];
-    $(".js-chat-member").each(function(){
-      value = $($(this).children()[0])
-      user_ids.push(value.val());
+    $data = $(".js-chat-member").each(function(){
+      user_ids.push($(this).children()[0].value);
     });
+    //情報を取得して来ないといけない
+
     $.ajax({
       type: 'GET',
       url: '/users',
@@ -34,39 +38,97 @@ $(function(){
     })
 
     .done(function(data) {
-      var result = $("#user-search-result")
-      result.empty();
+      $("#user-search-result").empty();
       if (data.length !== 0) {
         data.forEach(function(data){
-        var show_user_html = AddSearchedUserHTML(data);
-        result.append(show_user_html);
+        var show_user_html = buildHTML(data);
+        $("#user-search-result").append(show_user_html);
           });
         }
       })
+
     .fail(function(){
       alert('検索に失敗しました');
     })
+
     });
+
+
 
   $(document).on("click",".user-search-add", function() {
     $input = $(this);
-    var add_user_html = AddMemberHTML($input);
+    var add_user_html = addHTML($input);
     $("#search-users").append(add_user_html);
-    $input.parent().remove();
+    $parent = $input.parent();
+    $parent.remove();
+
     $.ajax({
       type: 'GET',
       url: '/users',
       dataType: 'json',
     })
+
     .done(function(data) {
-    })
+      })
+
     .fail(function(){
       alert('追加に失敗しました');
     })
+
     });
+
 
     $(document).on("click",".js-remove-btn", function() {
-    $(this).parent().remove();
+//すでにいるチャットメンバーは消さないといけない
+
+    $input = $(this);
+    $parent = $input.parent();
+    $parent.remove();
+
+    //     $.ajax({
+    //   type: 'GET',
+    //   url: '/users',
+    //   dataType: 'json',
+    // })
+
+    // .done(function(data) {
+    //   })
+
+    // .fail(function(){
+    //   alert('追加に失敗しました');
+    // })
+
     });
 
+//   $(document).on("click",".chat-group-user__btn--remove", function() {
+// //paramsを追加してviewそれに対応するviewを追加する
+//     $input = $(this);
+//     var add_user_html = addHTML($input);
+//     $("#search-users").append(add_user_html);
+
+//     debugger;
+
+//     $.ajax({
+//       type: 'GET',
+//       url: '/users',
+//       data: { keyword: input },
+//       dataType: 'json',
+//     })
+
+//     .done(function(data) {
+//       })
+
+//     .fail(function(){
+//       alert('追加に失敗しました');
+//     })
+
+//     });
+
   });
+
+
+
+
+
+
+

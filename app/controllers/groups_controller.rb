@@ -9,7 +9,8 @@ class GroupsController < ApplicationController
 
   def new
     @group = Group.new
-    @users = current_user
+    #これではダメだ、遷移先のhtmlはeach使っているので
+    @users = User.where(id: current_user.id)
   end
 
 
