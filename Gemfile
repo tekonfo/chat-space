@@ -68,3 +68,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
     gem 'faker'
   end
   gem 'rake', '< 11.0'
+
+  gem 'jquery-turbolinks'

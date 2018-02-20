@@ -2,6 +2,10 @@ class MessagesController < ApplicationController
   before_action :authenticate_user!,only: :index
   before_action :get_instance
   def index
+      respond_to do |format|
+        format.html
+        format.json
+      end
   end
   def create
     @message = Message.new(message_params)
