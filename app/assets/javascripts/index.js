@@ -5,26 +5,26 @@ $(document).on('turbolinks:load', function() {
     `
 
     if (comment.text != null) {
-    html = html + `<p class="name-write--small">${comment.text}</p>
-    `
+      html = html + `<p class="name-write--small">${comment.text}</p>
+      `
     }
     if (comment.image.url != null) {
-    html = html + `<p><img src="${comment.image.url}" alt="image"></p>
-    `
+      html = html + `<p><img src="${comment.image.url}" alt="image"></p>
+      `
     }
 
     html = html + '</div>'
     $('.right-mid').append(html)
   }
 
-  var interval =  setInterval(function(){
+  var interval = setInterval(function(){
   if (window.location.href.match(/\/groups\/\d+\/messages/)) {
     $.ajax({
       url: location.href.json,
       dataType: 'json',
     })
     .done(function(data){
-    var divmessage =$('.message')
+    var divmessage = $('.message')
     var html = ''
     var id = $($('.message')[divmessage.length-1]).data('messageId');
     if (data.messages.length != 0) {
@@ -34,7 +34,6 @@ $(document).on('turbolinks:load', function() {
         }
       });
     }
-
     })
     .fail(function(){
       alert('エラーが発生しました。');
