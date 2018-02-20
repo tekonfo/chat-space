@@ -30,7 +30,7 @@ $(document).on('turbolinks:load', function() {
     if (data.messages.length != 0) {
       data.messages.forEach(function(message){
         if (message.id > id || id == null) {
-          html = html + AddNewMessagesHTML(message);
+          addNewMessagesHTML(message);
         }
       });
     }
