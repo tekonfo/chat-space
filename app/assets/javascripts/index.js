@@ -1,5 +1,5 @@
 $(document).on('turbolinks:load', function() {
-  function AddNewMessagesHTML(comment){
+  function addNewMessagesHTML(comment){
     var html = `<div class="message" data-message-id="${comment.id}"><p class="name-write--name">${comment.name}</p>
     <p class="name-write--date">${comment.date}</p>
     `
@@ -14,7 +14,7 @@ $(document).on('turbolinks:load', function() {
     }
 
     html = html + '</div>'
-    return html;
+    $('.right-mid').append(html)
   }
 
   var interval =  setInterval(function(){
@@ -34,7 +34,6 @@ $(document).on('turbolinks:load', function() {
         }
       });
     }
-    $('.right-mid').append(html)
 
     })
     .fail(function(){
