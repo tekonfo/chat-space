@@ -9,7 +9,7 @@ class GroupsController < ApplicationController
 
   def new
     @group = Group.new
-    @users = User.all
+    @users = User.where(id: current_user.id)
   end
 
 
@@ -28,7 +28,7 @@ class GroupsController < ApplicationController
 
   def edit
     @group = Group.find(params[:id])
-    @user = User.all
+    @users = @group.users
   end
 
   def update
